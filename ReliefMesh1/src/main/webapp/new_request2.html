@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ReliefMesh - New Relief Request</title>
+</head>
+<body>
+    <h1>ReliefMesh</h1>
+    <h2>Register a Relief Request</h2>
+
+    <form action="relief-request" method="post">
+        <label>Requester Name:</label><br>
+        <input type="text" name="requesterName" required><br><br>
+
+        <label>Emergency Location:</label><br>
+        <input type="text" name="location" required><br><br>
+
+        <label>Emergency Type:</label><br>
+        <select name="emergencyType" required>
+            <option value="Flood">Flood</option>
+            <option value="Fire">Fire</option>
+            <option value="Medical Emergency">Medical Emergency</option>
+            <option value="Earthquake">Earthquake</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label>Severity (1 = Low, 5 = Critical):</label><br>
+        <select name="severity" required>
+            <option value="1">1 - Low</option>
+            <option value="2">2 - Moderate</option>
+            <option value="3">3 - Serious</option>
+            <option value="4">4 - Very High</option>
+            <option value="5">5 - Critical</option>
+        </select><br><br>
+
+        <label>Number of People Affected:</label><br>
+        <input type="number" name="peopleAffected"
+               min="1" value="1" required><br><br>
+
+        <button type="submit">Submit Relief Request</button>
+    </form>
+</body>
+</html>
